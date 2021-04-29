@@ -6,6 +6,9 @@
 @import "nav";
 @import "footer";
 
+.container{
+    @include flexContainer(row, center, center);
+}
 .banner{
     width: 100%;
     height: 600px;
@@ -46,6 +49,42 @@
         }
     }
 }
+
+.mission-statement{
+    width: 100%;
+    padding: 100px 40px;
+    @include flexContainer(row, flex-start, center)
+    .mission-statement__left{
+        width: 50%;
+        .mission-statement__left--title{
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .mission-statement__left--details{
+            padding-right: 60px;
+        }
+        p{
+            padding-right: 60px;
+            margin-bottom: 30px;
+        }
+        a{
+           text-transform: uppercase;
+           color: white;
+           background: $font-color; 
+           padding: 20px 30px;
+           border-radius: 5px;
+           border: none;
+        }
+
+    }
+    .mission-statement__right{
+        width: 50%;
+        img{
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+}
 @media only screen and (max-width: 750px){
     .banner .banner__text{
         width: 100%;
@@ -60,5 +99,23 @@
             }
         }
     }
+    .mission-statement{
+        @include flexContainer(column-reverse, center, center);
+        padding: 40px 15px;
+        .mission-statement__left{
+            @include flexContainer(column, center, center)
+            width: 100%;
+            text-align: center;
+            .mission-statement__left--details{
+                padding: 0;
+            }
+            
+        }
+        .mission-statement__right{
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+    
 }
 
