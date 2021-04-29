@@ -4,8 +4,8 @@ $color-bg: #F0F0F0;
 $color-btn: #EFEFEF;
 $black: #0a0a0a;
 $white: #fefefee9;
-$font-family-poppins: "Poppins", sans-serif;
-$font-family-zilla: "Zilla Slab", serif;
+$font-color: #027373;
+$font: 'Noto Sans JP', sans-serif;
 
 $max-width: 960px;
 $max-width-wide: 1300px;
@@ -76,13 +76,13 @@ html, body {
 	h2,
 	h3,
 	h4,
-	h5, li {
-		font-family: "Poppins", sans-serif;
+	h5, li, span, a{
+		font-family: $font;
 		opacity: 0.9;
 		line-height: 1.4;
 	}
 	p {
-		font-family: "Zilla Slab", serif;
+		font-family: $font;
 		line-height: 1.4;
 	}
 	h1{
@@ -95,6 +95,9 @@ html, body {
 	h3{
 		font-size: 1.5rem;
 		padding-bottom: 30px;
+	}
+	a{
+		text-decoration: none;
 	}
 }
 //Page Formatting================

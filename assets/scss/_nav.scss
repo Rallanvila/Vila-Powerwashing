@@ -1,0 +1,31 @@
+.nav{
+    @include flexContainer(row, space-between, center);
+    width: 100%;
+    padding: 0px 20px;
+    .nav__logo{
+        max-height: 90px;
+        padding: 10px;
+    }
+    .nav__links{
+        @include flexContainer(column, center, flex-end);
+        .nav__links-top{
+            padding: 10px;
+            .nav__links-top--callnow{
+                color: $font-color;
+                font-weight: 700;
+            }
+            .nav__links-top--number{
+                font-size: 1.3rem;
+                font-weight: 700;
+                margin-left: 10px;
+            }
+        }
+        .nav__links-bottom{
+            .nav__links-bottom-links{
+                margin: 10px 20px;
+                color: $font-color;
+                font-weight: 500;
+            }
+        }
+    }
+}
