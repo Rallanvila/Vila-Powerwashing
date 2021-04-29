@@ -1,0 +1,87 @@
+footer{
+    flex-wrap: wrap;
+    background: #027373;
+    padding: 20px;
+    .footer__wrapper{
+        @include flexContainer(row, flex-start, center);
+        flex-wrap: wrap;
+        background: #027373;
+        padding: 20px;
+        .footer__company-info{
+            width: 50%;
+            padding: 20px;
+            display: block;
+            .footer__company-info--name{
+                padding-bottom: 0;
+                font-weight: 700;
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .footer__company-info--details{
+                margin: 15px 0;
+                a{
+                    color: $white;
+                    text-decoration: underline;
+                }
+                .fas{
+                    margin-right: 10px;
+                    color: $white;
+                }
+            }
+        }
+        .footer__section{
+            padding: 20px;
+            display: block;
+            width: 50%;
+            img{
+                width: 100%;
+            }
+            .footer__section--title{
+                padding-bottom: 0;
+                font-weight: 700;
+                color: rgba(255, 255, 255, 0.8);
+    
+            }
+            .footer__section--details{
+                margin: 10px 0;
+                a{
+                    color: $white;
+                    font-size: 1.3rem;
+                    font-weight: 300;
+                }
+                .fas{
+                    margin-right: 15px;
+                    color: $white;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    .footer__bottom{
+        padding: 30px 40px;
+        @include flexContainer(row, space-between, center)
+        border-top: 1px solid rgba(255, 255, 255, 0.60);
+        .fab{
+            color: white;
+            font-size: 3rem;
+            margin-left: 20px;
+        }
+        .copyright{
+            color: white;
+        }
+    }
+}
+@media only screen and (max-width: 750px){
+  footer{
+      .footer__wrapper{
+        @include flexContainer(column, center, center);
+        .footer__section{
+            @include flexContainer(column, center, space-between);
+            width: 100%;
+            justify-content: center;
+            .fas{
+                justify-self: flex-start;
+            }
+        }
+    }
+  }
+}
