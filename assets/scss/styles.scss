@@ -6,5 +6,58 @@
 @import "nav";
 @import "footer";
 
-
+.banner{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    @include flexContainer(column, center, center);
+    background-image: url('https://www.wesellsarasota.com/wp-content/uploads/2019/08/Sarasota-downtown-condos-at-sunset.jpg');
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    .overlay{
+        background: rgba($color: #000000, $alpha: .5);
+        height: 600px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .banner__text{
+        @include flexContainer(column, center, center);
+        color: $white;
+        width: 50%;
+        z-index: 2;
+        background: rgba($color: #000000, $alpha: .7);
+        padding: 40px;
+        .banner__text--company{
+            font-weight: 300;
+        }
+        .banner__text--headline{
+            font-weight: 700;
+            text-align: center;
+        }
+        .banner__text--callnow{
+            padding: 20px;
+            border: 3px solid white;
+            border-radius: 5px;
+            margin-top: 40px;
+        }
+    }
+}
+@media only screen and (max-width: 750px){
+    .banner .banner__text{
+        width: 100%;
+        background: none;
+        .banner__text--callnow{
+            background: $white;
+            h2{
+                color: $font-color;
+                font-weight: 600;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
 
