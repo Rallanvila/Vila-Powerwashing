@@ -29,3 +29,21 @@
         }
     }
 }
+@media only screen and (max-width: 750px){
+    .nav{
+        .nav__links{
+            .nav__links-top{
+                @include flexContainer(column, center, flex-end)
+                .nav__links-top--callnow{
+                    width: 100%;
+                    text-align: end;
+                }
+            }
+            .nav__links-bottom{
+                .nav__links-bottom-links{
+                    display: none;
+                }
+            }
+        }
+    }
+}
