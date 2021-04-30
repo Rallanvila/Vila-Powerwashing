@@ -144,6 +144,110 @@
 
     }
 }
+.mywork{
+    padding: 100px 40px;
+    background: #F2E3D5;
+    @include flexContainer(column, center, center)
+    .mywork__header{
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    .mywork__details{
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .mywork__links .mywork__links--link{
+        margin: 0 20px;
+        color: $black;
+        font-weight: 500;
+        transition: color .3s ease-in-out;
+        &:hover{
+            color: $font-color;
+        }
+    }
+    .mywork__gallary{
+        max-width: 1300px;
+        margin: 30px auto;
+        flex-wrap: wrap;
+        @include flexContainer(row, space-evenly, center)
+        .mywork__gallary--img-container{
+            width: 33%;
+            padding: 20px;
+            img{
+                border-radius: 5px;
+                width: 100%;
+            }
+        }
+    }
+}
+.services{
+    @include flexContainer(row, center, center);
+    flex-wrap: wrap;
+    margin: 50px 0;
+    .services__header{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: 600;
+        color: $font-color;
+    }
+    .services__container{
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background-image: url("https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        margin: 20px;
+        .services__container--text{
+            @include flexContainer(column, center, center);
+            z-index: 5;
+            color: white;
+            .fas{
+                z-index: 2;
+                font-size: 2rem;
+                padding: 20px;
+                border: 1px solid white;
+                border-radius: 50%;
+                margin: 30px 0 20px;
+            }
+            h3{
+                z-index: 2;
+                padding-bottom: 20px;
+            }
+            p{
+                z-index: 2;
+                text-align: center;
+                padding: 0 20px;
+                font-size: 1.3rem;
+                font-weight: 300;
+            }
+        }
+        .services__overlay{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #04ADBF;
+            opacity: 0.7;
+            z-index: 1;
+            &.overlay2{
+                background: #658C0F;
+            }
+        }
+        
+    }
+}
+.passion{
+    @include flexContainer(column, center, center);
+    .passion__title{
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+}
 
 
 @media only screen and (max-width: 750px){
@@ -177,6 +281,8 @@
             margin-bottom: 40px;
         }
     }
-    
+    .quote-form__container--text{
+        width: 90%;
+    }
 }
 
