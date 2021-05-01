@@ -414,7 +414,10 @@
     .passion{
         height: unset;
         padding: 30px 15px;
-        text-align: center;        
+        text-align: center;
+        .overlay{
+            height: 100%;
+        }        
         .passion__details{
             width: 90%;
         }
