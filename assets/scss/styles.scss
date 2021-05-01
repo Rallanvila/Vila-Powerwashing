@@ -30,7 +30,7 @@
     .banner__text{
         @include flexContainer(column, center, center);
         color: $white;
-        width: 50%;
+        width: 60%;
         z-index: 2;
         background: rgba($color: #000000, $alpha: .7);
         padding: 40px;
@@ -43,44 +43,11 @@
         }
         .banner__text--callnow{
             padding: 20px;
-            border: 3px solid white;
+            border: none;
             border-radius: 5px;
             margin-top: 40px;
-        }
-    }
-}
-.mission-statement{
-    width: 100%;
-    padding: 100px 40px;
-    @include flexContainer(row, flex-start, center)
-    .mission-statement__left{
-        width: 50%;
-        .mission-statement__left--title{
-            font-weight: 500;
-            margin-bottom: 30px;
-        }
-        .mission-statement__left--details{
-            padding-right: 60px;
-        }
-        p{
-            padding-right: 60px;
-            margin-bottom: 30px;
-        }
-        a{
-           text-transform: uppercase;
-           color: white;
-           background: $font-color; 
-           padding: 20px 30px;
-           border-radius: 5px;
-           border: none;
-        }
-
-    }
-    .mission-statement__right{
-        width: 50%;
-        img{
-            width: 100%;
-            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.903);
+            color: rgba($color: #000000, $alpha: 1.0)
         }
     }
 }
@@ -96,7 +63,7 @@
         margin-left: auto;
         margin-right: auto;
         position: absolute;
-        top: -70px;
+        top: -60px;
         right: 0;
         left: 0;
         z-index: 4;
@@ -144,8 +111,43 @@
 
     }
 }
-.mywork{
+.mission-statement{
+    width: 100%;
     padding: 100px 40px;
+    @include flexContainer(row, flex-start, center)
+    .mission-statement__left{
+        width: 50%;
+        .mission-statement__left--title{
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .mission-statement__left--details{
+            padding-right: 60px;
+        }
+        p{
+            padding-right: 60px;
+            margin-bottom: 30px;
+        }
+        a{
+           text-transform: uppercase;
+           color: white;
+           background: $font-color; 
+           padding: 20px 30px;
+           border-radius: 5px;
+           border: none;
+        }
+
+    }
+    .mission-statement__right{
+        width: 50%;
+        img{
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+}
+.mywork{
+    padding: 60px 40px;
     background: #F2E3D5;
     @include flexContainer(column, center, center)
     .mywork__header{
@@ -216,6 +218,7 @@
             h3{
                 z-index: 2;
                 padding-bottom: 20px;
+                text-align: center;
             }
             p{
                 z-index: 2;
@@ -246,11 +249,11 @@
     height: 700px;
     width: 100%;
     position: relative;
-    background: url("https://lh3.googleusercontent.com/proxy/LkM_pS_KhzGKsLBlef-1eyq3ptIhsZpZYp1Qarg_IVhQTbqzouNw_zMJxabLalVL180_CV6WE7xB6sELWfyZ20vFVkSeP4COe1KbDg4btSEFZP_NJIY5x6mbCzQ8zaXsiRqxUCzyuDhhjlgpa-Kl");
+    background: url("https://www.mercurynews.com/wp-content/uploads/2018/10/ATHOME-_HOMEADVISOR-MCT.jpg");
     background-size: cover;
     background-position: center;
     .overlay{
-        background-color: rgba($color: #000000, $alpha: .8);
+        background-color: rgba($color: #000000, $alpha: .7);
         position: absolute;
         height: 700px;
         width: 100%;
@@ -333,6 +336,7 @@
 
 
 @media only screen and (max-width: 750px){
+    
     .banner .banner__text{
         width: 100%;
         background: none;
@@ -346,13 +350,24 @@
             }
         }
     }
+    .quote-form{
+        .quote-form__container{
+            top: -40px;
+            .quote-form__container--text{
+                width: 80%
+            }
+        }
+    }
     .mission-statement{
         @include flexContainer(column-reverse, center, center);
         padding: 40px 15px;
         .mission-statement__left{
-            @include flexContainer(column, center, center)
+            @include flexContainer(column, center, center);
             width: 100%;
             text-align: center;
+            .mission-statement__left--title{
+                font-size: 2rem;
+            }
             .mission-statement__left--details{
                 padding: 0;
             }
@@ -363,9 +378,68 @@
             margin-bottom: 40px;
         }
     }
-    .quote-form__container--text{
-        width: 90%;
+    .mywork{
+        padding: 40px 15px;
+        text-align: center;
+        .mywork__header{
+            font-size: 2rem;
+        }
+        .mywork__details{
+            font-size: 1.3rem;
+        }
+        .mywork__links{
+            .mywork__links--link{
+                margin: 0 15px;
+            }
+        }
+        .mywork__gallary{
+            .mywork__gallary--img-container{
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
     }
-
+    .services{
+        .services__header{
+            font-size: 2.5rem;
+        }
+        .services__container{
+            width: 100%;
+            overflow: hidden;
+        }
+        .services__overlay{
+            width: 100%;
+        }
+    }
+    .passion{
+        height: unset;
+        padding: 30px 15px;
+        text-align: center;
+        background-color: #333333;
+        .overlay{
+            display: none;
+        }
+        .passion__details{
+            width: 90%;
+        }
+        .passion__pillar--container{
+            width: 100%;
+            @include flexContainer(column, flex-start, flex-start);
+            .passion__pillar{
+                padding-bottom: 30px;
+            }
+        }
+    }
+    .family-owned{
+        text-align: center;
+        padding: 30px 15px;
+        .family-owned__title{
+            padding-top: 0;
+        }
+        .family-owned__details{
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
 }
 
