@@ -29,11 +29,12 @@
     }
     .banner__text{
         @include flexContainer(column, center, center);
-        color: $white;
         width: 60%;
-        z-index: 2;
-        background: rgba($color: #000000, $alpha: .7);
         padding: 40px;
+        color: $white;
+        z-index: 2;
+        text-align: center;
+        background: rgba($color: #000000, $alpha: .7);
         .banner__text--company{
             font-weight: 300;
         }
